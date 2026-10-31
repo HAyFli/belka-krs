@@ -311,8 +311,8 @@ Untracked files:
 
 PS D:\GitHub\belka-krs> git add LAB20_Git_Report.md
 PS D:\GitHub\belka-krs> git commit -m "docs: добавлен отчёт по лабораторной работе №20"
-[feature/lab20-report 1a2b3c4] docs: добавлен отчёт по лабораторной работе №20
- 1 file changed, 400 insertions(+)
+[feature/lab20-report 2186545] docs: добавлен отчёт по лабораторной работе №20
+ 1 file changed, 409 insertions(+)
 ```
 
 #### 2.2.2 Отправка ветки на GitHub и создание пул-реквеста
@@ -323,11 +323,13 @@ PS D:\GitHub\belka-krs> git push -u origin feature/lab20-report
 branch 'feature/lab20-report' set up to track 'origin/feature/lab20-report'.
 ```
 
-После отправки ветки на GitHub открыт пул-реквест **№1** «docs: добавлен отчёт по лабораторной работе №20» из ветки `feature/lab20-report` в `main`.
+После отправки ветки на GitHub открыт пул-реквест **№1** «docs: добавлен отчёт по лабораторной работе №20» из ветки `feature/lab20-report` в `main`:
+
+**https://github.com/HAyFli/belka-krs/pull/1**
 
 #### 2.2.3 Слияние (мердж) пул-реквеста
 
-В пул-реквесте нажата кнопка **Merge pull request**, затем **Confirm merge**. GitHub выполнил слияние ветки `feature/lab20-report` с `main` и создал коммит слияния.
+В пул-реквесте нажата кнопка **Merge pull request**, затем **Confirm merge**. GitHub выполнил слияние ветки `feature/lab20-report` с `main` и создал коммит слияния `fdf208c`.
 
 #### 2.2.4 Получение изменений (пул)
 
@@ -341,19 +343,20 @@ Your branch is up to date with 'origin/main'.
 PS D:\GitHub\belka-krs> git pull origin main
 From https://github.com/HAyFli/belka-krs
  * branch            main       -> FETCH_HEAD
-Updating 326c744..<merge-commit>
+Updating 326c744..fdf208c
 Fast-forward
- LAB20_Git_Report.md | 400 +++++++++++++++++++++++++++++++++++++++++++
- 1 file changed, 400 insertions(+)
+ LAB20_Git_Report.md | 409 ++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 409 insertions(+)
+ create mode 100644 LAB20_Git_Report.md
 ```
 
 #### 2.2.5 Просмотр дерева коммитов
 
 ```text
 PS D:\GitHub\belka-krs> git log --graph --oneline --all --decorate
-*   <merge-commit> (HEAD -> main, origin/main) Merge pull request #1 from HAyFli/feature/lab20-report
+*   fdf208c (HEAD -> main, origin/main) Merge pull request #1 from HAyFli/feature/lab20-report
 |\
-| * <commit> (origin/feature/lab20-report) docs: добавлен отчёт по лабораторной работе №20
+| * 2186545 (origin/feature/lab20-report, feature/lab20-report) docs: добавлен отчёт по лабораторной работе №20
 |/
 * 326c744 docs: указан автор курсового проекта
 * 8a1d91e Initial commit: курсовой проект «Белочка спасает мир» (C++/raylib)
